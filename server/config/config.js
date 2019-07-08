@@ -15,3 +15,15 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.URLDB = urlDB;
+
+
+//:::::::::::::::::::::
+//fecha de expiracion token
+//::::::::::::::::::
+process.env.CADUCIDAD = 60 * 60 * 24 * 30;
+
+
+//:::::::::::::::::::::
+//seed
+//::::::::::::::::::
+process.env.SEED = process.env.SEED || 'DESARROLLO-SEED';
