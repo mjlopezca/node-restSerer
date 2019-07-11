@@ -27,3 +27,9 @@ process.env.CADUCIDAD = 60 * 60 * 24 * 30;
 //seed
 //::::::::::::::::::
 process.env.SEED = process.env.SEED || 'DESARROLLO-SEED';
+
+
+//:::::::::::::::::::::
+//seed
+//::::::::::::::::::
+process.env.CLEINTID = process.env.CLEINTID || '779180910643-310egtha4d54d8s02nqvv47us2kv8nug.apps.googleusercontent.com';

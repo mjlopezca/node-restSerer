@@ -61,6 +61,7 @@ app.post('/usuario', [verificaToken, verificaRol], function(req, res) {
 })
 app.put('/usuario/:id', [verificaToken, verificaRol], function(req, res) {
     let id = req.params.id;
+    //crea una copia del body, solo deja los elementos que estan en el arreglo
     let body = _.pick(req.body, ["nombre", "email", "img", "estado"]);
 
     Usuario.findOneAndUpdate(id, body, { new: true, runValidators: true }, (err, usuarioDB) => {
@@ -81,9 +82,8 @@ app.delete('/usuario/:id', [verificaToken, verificaRol], function(req, res) {
     let id = req.params.id;
     console.log(id);
     let cambiarEstado = {
-            estado: false
-        }
-        //Usuario.findByIdAndRemove(id, (err, deleteUsuario) => {
+        estado: false
+    }
     Usuario.findOneAndUpdate(id, cambiarEstado, { new: true, runValidators: true }, (err, deleteUsuario) => {
         if (err) {
             res.status(400).json({
