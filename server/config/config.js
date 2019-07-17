@@ -20,7 +20,7 @@ process.env.URLDB = urlDB;
 //:::::::::::::::::::::
 //fecha de expiracion token
 //::::::::::::::::::
-process.env.CADUCIDAD = 60 * 60 * 24 * 30;
+process.env.CADUCIDAD = '48h';
 
 
 //:::::::::::::::::::::

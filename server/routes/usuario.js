@@ -1,9 +1,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const _ = require('underscore');
-const Usuario = require('../models/usuario');
-const app = express()
-const { verificaToken, verificaRol } = require('../middlewares/authentication');
+let _ = require('underscore');
+let Usuario = require('../models/usuario');
+let app = express()
+let { verificaToken, verificaRol } = require('../middlewares/authentication');
 
 
 app.get('/usuario', verificaToken, (req, res) => {
